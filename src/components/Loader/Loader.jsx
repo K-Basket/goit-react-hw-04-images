@@ -14,7 +14,3 @@ export function Loader() {
     />
   );
 }
-
-// export function Loader() {
-//   return <p>loading...</p>;
-// }

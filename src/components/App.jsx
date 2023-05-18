@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { Main, Loading } from './Styled';
 import { Searchbar } from './Searchbar';
 import { ImageGallery } from './ImageGallery';
@@ -8,6 +8,18 @@ import { getImages } from './Api/api';
 import Notiflix from 'notiflix';
 import { Loader } from './Loader/Loader';
 import { Button } from './Button/Button';
+
+export function App() {
+  const [showModal, setShowModal] = useState(false);
+  const [searchData, setSearchData] = useState('');
+  const [largeImageURL, setLargeImageURL] = useState('');
+  const [dataGallery, setDataGallery] = useState([]);
+  const [loader, setLoader] = useState(false);
+  const [page, setPage] = useState(1);
+  const [status, setStatus] = useState('idle');
+  const [button, setButton] = useState(false);
+  const [totalHits, setTotalHits] = useState(0);
+}
 
 export class App extends Component {
   state = {
@@ -21,7 +33,7 @@ export class App extends Component {
     button: false,
     totalHits: 0,
   };
-
+  // продолжать здесь!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   async componentDidUpdate(prevProps, prevState) {
     try {
       if (prevState.searchData !== this.state.searchData) {
@@ -69,7 +81,8 @@ export class App extends Component {
   };
 
   handleFormSubmit = data => {
-    this.setState({ searchData: data.search });
+    this.setState({ searchData: data });
+    console.log('data :>> ', data);
   };
 
   handleLargeImageURL = url => {
