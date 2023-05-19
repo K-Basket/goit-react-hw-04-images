@@ -28,4 +28,4 @@ export async function getImages(searchData, page) {
   return dataImages;
 }
 
-// getImages('89', 1).then  (console.log);
+// getImages('89', 1).then(console.log);
