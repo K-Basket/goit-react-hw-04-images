@@ -10,16 +10,3 @@ export function ImageGallery({ children }) {
     </>
   );
 }
-
-// export class ImageGallery extends Component {
-
-//   render() {
-//     return (
-//       <>
-//         <Gallery>
-//           <>{this.props.children}</>
-//         </Gallery>
-//       </>
-//     );
-//   }
-// }
